@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
+// eslint-disable-next-line semi
 import { Navigation } from "..";
 import config from "../../../utils/siteConfig";
 
@@ -20,7 +21,7 @@ import "./../../../styles/app.css";
  *
  */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
-    const site = data.allGhostSettings.edges[0].node;
+    const site = data?.allGhostSettings?.edges[0]?.node;
     console.log(site.codeinjection_styles);
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
